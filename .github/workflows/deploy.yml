@@ -15,7 +15,7 @@ env:
   AWS_REGION: ap-northeast-2
   S3_BUCKET_NAME: rhtjddn2-s3-bucket-github-actions	
   CODE_DEPLOY_APPLICATION_NAME: rhtjddn2-codedepoly-app
-  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: rhtjddn2-codedeploy-deploy-group
+  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: rhtjddn2023-codedeploy-deploy-group
   
 # workflow는 한개 이상의 job을 가지며, 각 job은 여러 step에 따라 단계를 나눌 수 있습니다.
 jobs:
