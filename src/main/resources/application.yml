@@ -1,0 +1,58 @@
+logging:
+    file:
+        name: log/Sboard.log
+    level:
+        jdbc:
+            connection: info
+            resultsettable: info
+            sqlonly: info
+            sqltiming: info
+        org:
+            hibernate: info
+            springframework:
+                security: debug
+        root: info
+server:
+    servlet:
+        context-path: /
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Rhtjddn@03
+        url: jdbc:mysql://43.201.107.50:3306/Jboard
+        username: root
+    devtools:
+        livereload:
+            enabled: true
+        remote:
+            restart:
+                enabled: true
+    jpa:
+        database: mysql
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                format_sql: true
+                show_sql: true
+                use_sql_comments: true
+    security:
+        user:
+            name: user
+            password: 1234
+    thymeleaf:
+        cache: false
+        # prefix 설정을 안하면 HTML 수정 후 브라우저에서 새로고침 반영안됨
+        # 그리고 반드시 classpath 경로로 쓰고 templates 마지막에 슬러쉬(/) 붙이면 배포파일 실행안됨
+        # Controller에서 리턴되는 view 경로 제일 앞에 '/'가 있다면 templates
+        # Controller에서 리턴되는 view 경로 제일 앞에 '/'가 없다면 templates/
+        prefix: classpath:/templates
+
+    servlet:
+        multipart:
+            location: src/main/resources/static/file/
+            max-file-size: 10MB
+
+
